@@ -5,8 +5,10 @@ Caching request module
 import redis
 import requests
 from functools import wraps
-from typing import Callable
+from typing import callable 
 
+# Configure Redis connection
+redis_client = redis.Redis()
 
 def track_get_page(fn: Callable) -> Callable:
     """ Decorator for get_page
