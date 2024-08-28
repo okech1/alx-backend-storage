@@ -4,8 +4,10 @@
 import redis
 import requests
 from functools import wraps
-from typing import Callable
+from typing import callable 
 
+# Configure Redis connection
+redis_client = redis.Redis()
 
 redis_store = redis.Redis()
 '''The module-level Redis instance.
